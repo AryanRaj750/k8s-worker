@@ -48,4 +48,4 @@ galaxy_info:
     #       Maximum 20 tags per role.
 
 dependencies:
-  - aryanraj750.k8s-master
+  - aryanraj750.k8s_master

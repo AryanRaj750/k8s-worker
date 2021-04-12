@@ -32,7 +32,7 @@
        service:
           name: "docker"
           state: restarted
-       when: daemon.changed == true
+       #when: daemon.changed == true
      - name: "install iproute-tc package"
        package:
            name: "iproute-tc"
@@ -42,7 +42,7 @@
            src: "k8s.conf"
            dest: "/etc/sysctl.d/"
      - name: "join workner node to master node"
-       shell: "{{ hostvars['Dummy_Host']['token'] }}"
+       command: "{{ hostvars['Dummy_Host']['token'] }}"
   rescue:
      - name: "why failed, debuging..."
        debug:
